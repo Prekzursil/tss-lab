@@ -90,7 +90,7 @@ coverage 100 % (57 statements, 22 branches, 0 missed).
 | 1 | Program + requirements | `pricing.py` (port of the team's module) + [`SPEC.md`](SPEC.md) |
 | 2 | Coverage measurement/comparison | [`docs/coverage-comparison.md`](docs/coverage-comparison.md) |
 | 3 | Control-flow graph, V(G), basis paths | [`docs/cfg.drawio`](docs/cfg.drawio) + [`docs/cfg.svg`](docs/cfg.svg) + [`docs/cfg-analysis.md`](docs/cfg-analysis.md) + verifier [`docs/gen_cfg.py`](docs/gen_cfg.py) |
-| 4 | Test-design techniques (EP / BVA / CEG / MC-DC) | `tests/test_ep.py` + [`docs/ep.md`](docs/ep.md) · `tests/test_bva.py` + [`docs/bva.md`](docs/bva.md) · `tests/test_ceg.py` + [`docs/ceg.md`](docs/ceg.md) · `tests/test_mcdc.py` + [`docs/mcdc.md`](docs/mcdc.md) |
+| 4 | Test-design techniques (EP / BVA / CEG / MC-DC) | `tests/test_ep.py` + [`docs/ep.md`](docs/ep.md) · `tests/test_bva.py` + [`docs/bva.md`](docs/bva.md) · `tests/test_ceg.py` + [`docs/ceg.md`](docs/ceg.md) |
 | 5–6 | Hand-built mutants: killed / surviving / equivalent + demonstration | [`mutants/`](mutants) (3 order-1 mutants + `run_demo.py`) + [`docs/mutants-manual.md`](docs/mutants-manual.md) |
 | 7 | Mutation-testing tools, two tools, analysis | [`docs/mutation-analysis.md`](docs/mutation-analysis.md) (mutmut 3.8.0 + cosmic-ray 8.7.0, each × 4 suites) |
 
@@ -119,11 +119,12 @@ project which of points 1–7 they contributed to, with percentages summing to
 
 | Member | Points contributed to | Own percentage |
 |---|---|---|
-| Member 1 — [NAME] | points 1a, 1c, 2, 3 | [XX] % |
-| Member 2 — [NAME] | points 1b, 4, 5, 6, 7 | [YY] % |
+| Member 1 — [NAME] | points 1a, 2 | [W] % |
+| Member 2 — [NAME] | points 1b, 3 | [X] % |
+| Member 3 — [NAME] | points 1c, 4 | [Y] % |
+| Member 4 — [NAME] | points 5, 6, 7 | [Z] % |
 
-[XX] + [YY] = 100 %. If this is a solo submission, keep one row and declare
-100 %.
+[W] + [X] + [Y] + [Z] = 100 %. If this is a solo submission, keep one row and declare 100 %.
 
 AI assistance for every deliverable is itemized in
 [`AI_USAGE.md`](AI_USAGE.md); the declaration above concerns the team's own
