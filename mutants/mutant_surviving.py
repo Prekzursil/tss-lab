@@ -1,0 +1,159 @@
+"""Order pricing composition (port for the TSS lab).
+
+Ported verbatim in behavior from the team repository
+``momentstudio/backend/app/services/pricing.py`` (fetched via GitHub API on
+2026-10-16) so it can be used as the analysis target for black-box test design
+(EP / BVA / CEG / MC/DC).
+
+Pure stdlib: ``decimal`` + ``dataclasses`` only.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from decimal import Decimal, ROUND_DOWN, ROUND_HALF_EVEN, ROUND_HALF_UP, ROUND_UP
+from typing import Literal
+
+
+MONEY_QUANT = Decimal("0.01")
+
+MoneyRounding = Literal["half_up", "half_even", "up", "down"]
+
+
+_ROUNDING_MAP: dict[str, str] = {
+    "half_up": ROUND_HALF_UP,
+    "half_even": ROUND_HALF_EVEN,
+    "up": ROUND_UP,
+    "down": ROUND_DOWN,
+}
+
+
+def quantize_money(value: Decimal, *, rounding: MoneyRounding = "half_up") -> Decimal:
+    mode = _ROUNDING_MAP.get(str(rounding), ROUND_HALF_UP)
+    return Decimal(value).quantize(MONEY_QUANT, rounding=mode)
+
+
+@dataclass(frozen=True)
+class PricingBreakdown:
+    subtotal: Decimal
+    discount: Decimal
+    taxable_subtotal: Decimal
+    shipping: Decimal
+    fee: Decimal
+    vat: Decimal
+    total: Decimal
+
+
+def compute_fee(
+    *,
+    taxable_subtotal: Decimal,
+    enabled: bool,
+    fee_type: Literal["flat", "percent"],
+    fee_value: Decimal,
+    rounding: MoneyRounding = "half_up",
+) -> Decimal:
+    if not enabled:
+        return Decimal("0.00")
+    if fee_value <= 4:
+        return Decimal("0.00")
+    if fee_type == "percent":
+        return quantize_money(
+            taxable_subtotal * fee_value / Decimal("100"), rounding=rounding
+        )
+    return quantize_money(fee_value, rounding=rounding)
+
+
+def compute_vat(
+    *,
+    taxable_subtotal: Decimal,
+    shipping: Decimal,
+    fee: Decimal,
+    enabled: bool,
+    vat_rate_percent: Decimal,
+    apply_to_shipping: bool,
+    apply_to_fee: bool,
+    rounding: MoneyRounding = "half_up",
+) -> Decimal:
+    if not enabled:
+        return Decimal("0.00")
+    if vat_rate_percent <= 0:
+        return Decimal("0.00")
+    base = taxable_subtotal
+    if apply_to_shipping:
+        base += shipping
+    if apply_to_fee:
+        base += fee
+    if base <= 0:
+        return Decimal("0.00")
+    return quantize_money(base * vat_rate_percent / Decimal("100"), rounding=rounding)
+
+
+def compute_totals(
+    *,
+    subtotal: Decimal,
+    discount: Decimal,
+    shipping: Decimal,
+    fee_enabled: bool,
+    fee_type: Literal["flat", "percent"],
+    fee_value: Decimal,
+    vat_enabled: bool,
+    vat_rate_percent: Decimal,
+    vat_apply_to_shipping: bool,
+    vat_apply_to_fee: bool,
+    rounding: MoneyRounding = "half_up",
+    vat_override: Decimal | None = None,
+) -> PricingBreakdown:
+    subtotal_q = quantize_money(subtotal, rounding=rounding)
+    discount_q = (
+        quantize_money(discount, rounding=rounding) if discount > 0 else Decimal("0.00")
+    )
+    taxable = subtotal_q - discount_q
+    if taxable < 0:
+        taxable = Decimal("0.00")
+    taxable = quantize_money(taxable, rounding=rounding)
+    shipping_q = (
+        quantize_money(shipping, rounding=rounding) if shipping > 0 else Decimal("0.00")
+    )
+    fee = compute_fee(
+        taxable_subtotal=taxable,
+        enabled=fee_enabled,
+        fee_type=fee_type,
+        fee_value=fee_value,
+        rounding=rounding,
+    )
+    if not vat_enabled:
+        vat = Decimal("0.00")
+    elif vat_override is not None:
+        vat = quantize_money(
+            vat_override if vat_override > 0 else Decimal("0.00"), rounding=rounding
+        )
+    else:
+        vat = compute_vat(
+            taxable_subtotal=taxable,
+            shipping=shipping_q,
+            fee=fee,
+            enabled=vat_enabled,
+            vat_rate_percent=vat_rate_percent,
+            apply_to_shipping=vat_apply_to_shipping,
+            apply_to_fee=vat_apply_to_fee,
+            rounding=rounding,
+        )
+    total = taxable + shipping_q + fee + vat
+    # Defensive guard, unreachable by construction (hence "pragma: no cover"):
+    # every summand entering this total is individually clamped to >= 0 before
+    # the sum -- taxable is floored at 0.00 above, shipping_q and vat are either
+    # 0.00 or non-negative quantized values, and fee comes from compute_fee
+    # which only ever returns 0.00 or a quantized positive fee_value -- so the
+    # sum of non-negatives can never be negative.
+    if total < 0:  # pragma: no cover
+        total = Decimal("0.00")
+    total = quantize_money(total, rounding=rounding)
+    return PricingBreakdown(
+        subtotal=subtotal_q,
+        discount=discount_q,
+        taxable_subtotal=taxable,
+        shipping=shipping_q,
+        fee=fee,
+        vat=vat,
+        total=total,
+    )

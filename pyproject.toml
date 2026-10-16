@@ -1,0 +1,23 @@
+[project]
+name = "tss-lab"
+version = "0.1.0"
+description = "Black-box test design lab (EP/BVA/CEG/MC-DC) for the pricing module."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-cov>=5"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+# keep the delivered tree clean: no .pytest_cache/ is created on any run
+addopts = "-p no:cacheprovider"
+
+[tool.coverage.run]
+source = ["pricing"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+precision = 2

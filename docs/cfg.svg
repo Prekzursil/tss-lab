@@ -1,0 +1,300 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3170" height="1526" viewBox="0 0 3170 1526" font-family="Consolas, ui-monospace, monospace">
+<defs><marker id="ah" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#37474f"/></marker><marker id="ahc" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#ad1457"/></marker></defs>
+<rect x="0" y="0" width="3170" height="1526" fill="#ffffff"/>
+<text x="40" y="28" font-size="16" font-weight="bold" fill="#212121">pricing.py - control-flow graph (51 basic blocks / 62 control edges / 11 call edges)</text>
+<rect x="40" y="44" width="14" height="14" fill="#d5e8d4" stroke="#6aa84f"/>
+<text x="58" y="55" font-size="11" fill="#212121">entry</text>
+<rect x="130" y="44" width="14" height="14" fill="#ffe6cc" stroke="#d79b00"/>
+<text x="148" y="55" font-size="11" fill="#212121">decision</text>
+<rect x="220" y="44" width="14" height="14" fill="#dae8fc" stroke="#6c8ebf"/>
+<text x="238" y="55" font-size="11" fill="#212121">statement</text>
+<rect x="310" y="44" width="14" height="14" fill="#f8cecc" stroke="#b85450"/>
+<text x="328" y="55" font-size="11" fill="#212121">exit</text>
+<line x1="400" y1="51" x2="444" y2="51" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="450" y="55" font-size="11">control</text>
+<line x1="520" y1="51" x2="564" y2="51" stroke="#ad1457" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="570" y="55" font-size="11">call</text>
+<rect x="20" y="70" width="710" height="146" fill="none" stroke="#9673a6" stroke-dasharray="8 6"/><text x="28" y="90" font-size="13" font-weight="bold" fill="#9673a6">quantize_money</text>
+<rect x="820" y="70" width="710" height="490" fill="none" stroke="#9673a6" stroke-dasharray="8 6"/><text x="828" y="90" font-size="13" font-weight="bold" fill="#9673a6">compute_fee</text>
+<rect x="1620" y="70" width="710" height="834" fill="none" stroke="#9673a6" stroke-dasharray="8 6"/><text x="1628" y="90" font-size="13" font-weight="bold" fill="#9673a6">compute_vat</text>
+<rect x="2420" y="70" width="710" height="1436" fill="none" stroke="#9673a6" stroke-dasharray="8 6"/><text x="2428" y="90" font-size="13" font-weight="bold" fill="#9673a6">compute_totals</text>
+<line x1="1092.0" y1="371.0" x2="230.6" y2="149.0" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="665.3" y="256.0" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<line x1="1105.9" y1="454.0" x2="212.1" y2="149.0" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="663.0" y="297.5" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<line x1="1684.1" y1="712.0" x2="206.2" y2="149.0" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="949.2" y="426.5" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<line x1="2462.0" y1="219.4" x2="248.0" y2="133.1" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="1359.0" y="172.2" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<line x1="2692.0" y1="302.7" x2="248.0" y2="135.8" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="1474.0" y="215.2" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<line x1="2462.0" y1="550.0" x2="248.0" y2="146.5" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="1359.0" y="344.2" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<line x1="2692.0" y1="634.5" x2="248.0" y2="148.0" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="1474.0" y="387.2" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<line x1="2484.1" y1="712.0" x2="1006.2" y2="149.0" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="1749.2" y="426.5" font-size="9" font-style="italic" fill="#ad1457">call compute_fee</text>
+<line x1="2703.1" y1="970.0" x2="214.1" y2="149.0" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="1462.6" y="555.5" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<line x1="2975.8" y1="970.0" x2="1783.3" y2="149.0" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="2383.6" y="555.5" font-size="9" font-style="italic" fill="#ad1457">call compute_vat</text>
+<line x1="2497.4" y1="1228.0" x2="196.6" y2="149.0" stroke="#ad1457" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="5,4" marker-end="url(#ahc)"/>
+<text x="1351.0" y="684.5" font-size="9" font-style="italic" fill="#ad1457">call quantize_money</text>
+<path d="M248.0 132.5 L292.0 134.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M478.0 134.0 L522.0 132.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M955.0 149.0 L955.0 196.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1048.0 215.5 L1092.0 215.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1064.2" y="212.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M955.0 235.0 L955.0 282.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="958.0" y="246.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M1211.1 235.0 L1388.9 368.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1048.0 301.5 L1092.0 301.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1064.2" y="298.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M955.0 321.0 L955.0 368.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="958.0" y="332.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M1237.2 321.0 L1362.8 368.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1048.0 390.5 L1092.0 392.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1064.2" y="388.0" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M1003.0 407.0 L1118.6 454.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1040.7" y="418.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M1278.0 392.0 L1322.0 390.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1251.4 454.0 L1367.0 407.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1755.0 149.0 L1755.0 196.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1848.0 215.5 L1892.0 215.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1864.2" y="212.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M1755.0 235.0 L1755.0 282.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1758.0" y="246.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2078.0 215.5 L2300.0 215.5 L2300.0 817.5 L2308.0 817.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1848.0 301.5 L1892.0 301.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1864.2" y="298.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M1755.0 321.0 L1755.0 368.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1758.0" y="332.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2078.0 301.5 L2314.0 301.5 L2314.0 817.5 L2308.0 817.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1755.0 407.0 L1755.0 454.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1848.0 473.5 L1892.0 473.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1864.2" y="470.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M1755.0 493.0 L1755.0 540.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1758.0" y="504.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M1932.8 493.0 L1807.2 540.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1848.0 559.5 L1892.0 559.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1864.2" y="556.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M1755.0 579.0 L1755.0 626.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1758.0" y="590.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M1932.8 579.0 L1807.2 626.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1848.0 645.5 L1892.0 645.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1864.2" y="642.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M1755.0 665.0 L1755.0 712.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="1758.0" y="676.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2078.0 645.5 L2328.0 645.5 L2328.0 817.5 L2308.0 817.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M1848.0 754.9 L2122.0 801.6" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2555.0 149.0 L2555.0 196.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2555.0 250.0 L2555.0 282.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2648.0 309.0 L2692.0 309.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2664.2" y="306.0" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M2634.1 336.0 L2727.9 368.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2665.2" y="342.6" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2712.8 336.0 L2627.2 368.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2692.0 390.5 L2648.0 392.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2555.0 422.0 L2555.0 454.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2648.0 473.5 L2692.0 473.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2664.2" y="470.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M2555.0 493.0 L2555.0 540.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2558.0" y="504.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2737.0 493.0 L2621.4 540.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2555.0 594.0 L2555.0 626.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2648.0 653.0 L2692.0 653.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2664.2" y="650.0" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M2634.1 680.0 L2727.9 712.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2665.2" y="686.6" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2712.8 680.0 L2627.2 712.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2692.0 734.5 L2648.0 736.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2555.0 766.0 L2555.0 798.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2648.0 817.5 L2692.0 817.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2664.2" y="814.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M2555.0 837.0 L2555.0 884.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2558.0" y="848.1" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2768.1 837.0 L2578.4 1056.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2648.0 911.0 L2692.0 911.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2664.2" y="908.0" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M2648.0 928.4 L2922.0 979.6" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2733.2" y="940.8" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2792.0 938.0 L2792.0 970.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2795.0" y="944.6" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M2778.0 938.0 L2778.0 970.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2781.0" y="944.6" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2712.8 1024.0 L2627.2 1056.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2922.0 1014.4 L2648.0 1065.6" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2555.0 1110.0 L2555.0 1142.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2648.0 1166.0 L2692.0 1164.5" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2664.2" y="1162.5" font-size="10" font-weight="bold" fill="#37474f">T</text>
+<path d="M2555.0 1196.0 L2555.0 1228.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<text x="2558.0" y="1202.6" font-size="10" font-weight="bold" fill="#37474f">F</text>
+<path d="M2737.0 1181.0 L2621.4 1228.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2555.0 1282.0 L2555.0 1314.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<path d="M2555.0 1368.0 L2555.0 1400.0" fill="none" stroke="#37474f" stroke-width="1.4" marker-end="url(#ah)"/>
+<rect x="62.0" y="110.0" width="186" height="39" rx="4" fill="#d5e8d4" stroke="#6aa84f" stroke-width="1.3"/>
+<text x="155.0" y="133.5" font-size="11" font-weight="bold" fill="#212121" text-anchor="middle">ENTER quantize_money</text>
+<rect x="292.0" y="110.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="300.0" y="128.0" font-size="11" font-weight="bold" fill="#212121">N2</text>
+<text x="300.0" y="143.0" font-size="10" fill="#37474f">L32: mode = _ROUNDING_MAP.get(rounding, HALF_UP)</text>
+<text x="300.0" y="158.0" font-size="10" fill="#37474f">L33: return value.quantize(0.01, mode)</text>
+<rect x="522.0" y="110.0" width="186" height="39" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1.3"/>
+<text x="615.0" y="133.5" font-size="11" font-weight="bold" fill="#212121" text-anchor="middle">EXIT quantize_money</text>
+<rect x="862.0" y="110.0" width="186" height="39" rx="4" fill="#d5e8d4" stroke="#6aa84f" stroke-width="1.3"/>
+<text x="955.0" y="133.5" font-size="11" font-weight="bold" fill="#212121" text-anchor="middle">ENTER compute_fee</text>
+<rect x="862.0" y="196.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="870.0" y="214.0" font-size="11" font-weight="bold" fill="#212121">N5 ?</text>
+<text x="870.0" y="229.0" font-size="10" fill="#37474f">L55: if not enabled</text>
+<rect x="1092.0" y="196.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1100.0" y="214.0" font-size="11" font-weight="bold" fill="#212121">N6</text>
+<text x="1100.0" y="229.0" font-size="10" fill="#37474f">L56: return 0.00</text>
+<rect x="862.0" y="282.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="870.0" y="300.0" font-size="11" font-weight="bold" fill="#212121">N7 ?</text>
+<text x="870.0" y="315.0" font-size="10" fill="#37474f">L57: if fee_value &lt;= 0</text>
+<rect x="1092.0" y="282.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1100.0" y="300.0" font-size="11" font-weight="bold" fill="#212121">N8</text>
+<text x="1100.0" y="315.0" font-size="10" fill="#37474f">L58: return 0.00</text>
+<rect x="862.0" y="368.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="870.0" y="386.0" font-size="11" font-weight="bold" fill="#212121">N9 ?</text>
+<text x="870.0" y="401.0" font-size="10" fill="#37474f">L59: if fee_type == 'percent'</text>
+<rect x="1092.0" y="368.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1100.0" y="386.0" font-size="11" font-weight="bold" fill="#212121">N10</text>
+<text x="1100.0" y="401.0" font-size="10" fill="#37474f">L60-62: return quantize_money(</text>
+<text x="1100.0" y="416.0" font-size="10" fill="#37474f">  taxable*fee_value/100) [call]</text>
+<rect x="1092.0" y="454.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1100.0" y="472.0" font-size="11" font-weight="bold" fill="#212121">N11</text>
+<text x="1100.0" y="487.0" font-size="10" fill="#37474f">L63: return quantize_money(</text>
+<text x="1100.0" y="502.0" font-size="10" fill="#37474f">  fee_value) [call]</text>
+<rect x="1322.0" y="368.0" width="186" height="39" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1.3"/>
+<text x="1415.0" y="391.5" font-size="11" font-weight="bold" fill="#212121" text-anchor="middle">EXIT compute_fee</text>
+<rect x="1662.0" y="110.0" width="186" height="39" rx="4" fill="#d5e8d4" stroke="#6aa84f" stroke-width="1.3"/>
+<text x="1755.0" y="133.5" font-size="11" font-weight="bold" fill="#212121" text-anchor="middle">ENTER compute_vat</text>
+<rect x="1662.0" y="196.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="1670.0" y="214.0" font-size="11" font-weight="bold" fill="#212121">N14 ?</text>
+<text x="1670.0" y="229.0" font-size="10" fill="#37474f">L77: if not enabled</text>
+<rect x="1892.0" y="196.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1900.0" y="214.0" font-size="11" font-weight="bold" fill="#212121">N15</text>
+<text x="1900.0" y="229.0" font-size="10" fill="#37474f">L78: return 0.00</text>
+<rect x="1662.0" y="282.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="1670.0" y="300.0" font-size="11" font-weight="bold" fill="#212121">N16 ?</text>
+<text x="1670.0" y="315.0" font-size="10" fill="#37474f">L79: if vat_rate_percent &lt;= 0</text>
+<rect x="1892.0" y="282.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1900.0" y="300.0" font-size="11" font-weight="bold" fill="#212121">N17</text>
+<text x="1900.0" y="315.0" font-size="10" fill="#37474f">L80: return 0.00</text>
+<rect x="1662.0" y="368.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1670.0" y="386.0" font-size="11" font-weight="bold" fill="#212121">N18</text>
+<text x="1670.0" y="401.0" font-size="10" fill="#37474f">L81: base = taxable_subtotal</text>
+<rect x="1662.0" y="454.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="1670.0" y="472.0" font-size="11" font-weight="bold" fill="#212121">N19 ?</text>
+<text x="1670.0" y="487.0" font-size="10" fill="#37474f">L82: if apply_to_shipping</text>
+<rect x="1892.0" y="454.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1900.0" y="472.0" font-size="11" font-weight="bold" fill="#212121">N20</text>
+<text x="1900.0" y="487.0" font-size="10" fill="#37474f">L83: base += shipping</text>
+<rect x="1662.0" y="540.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="1670.0" y="558.0" font-size="11" font-weight="bold" fill="#212121">N21 ?</text>
+<text x="1670.0" y="573.0" font-size="10" fill="#37474f">L84: if apply_to_fee</text>
+<rect x="1892.0" y="540.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1900.0" y="558.0" font-size="11" font-weight="bold" fill="#212121">N22</text>
+<text x="1900.0" y="573.0" font-size="10" fill="#37474f">L85: base += fee</text>
+<rect x="1662.0" y="626.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="1670.0" y="644.0" font-size="11" font-weight="bold" fill="#212121">N23 ?</text>
+<text x="1670.0" y="659.0" font-size="10" fill="#37474f">L86: if base &lt;= 0</text>
+<rect x="1892.0" y="626.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1900.0" y="644.0" font-size="11" font-weight="bold" fill="#212121">N24</text>
+<text x="1900.0" y="659.0" font-size="10" fill="#37474f">L87: return 0.00</text>
+<rect x="1662.0" y="712.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="1670.0" y="730.0" font-size="11" font-weight="bold" fill="#212121">N25</text>
+<text x="1670.0" y="745.0" font-size="10" fill="#37474f">L88: return quantize_money(</text>
+<text x="1670.0" y="760.0" font-size="10" fill="#37474f">  base*rate/100) [call]</text>
+<rect x="2122.0" y="798.0" width="186" height="39" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1.3"/>
+<text x="2215.0" y="821.5" font-size="11" font-weight="bold" fill="#212121" text-anchor="middle">EXIT compute_vat</text>
+<rect x="2462.0" y="110.0" width="186" height="39" rx="4" fill="#d5e8d4" stroke="#6aa84f" stroke-width="1.3"/>
+<text x="2555.0" y="133.5" font-size="11" font-weight="bold" fill="#212121" text-anchor="middle">ENTER compute_totals</text>
+<rect x="2462.0" y="196.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2470.0" y="214.0" font-size="11" font-weight="bold" fill="#212121">N28</text>
+<text x="2470.0" y="229.0" font-size="10" fill="#37474f">L106: subtotal_q =</text>
+<text x="2470.0" y="244.0" font-size="10" fill="#37474f">  quantize_money(subtotal) [call]</text>
+<rect x="2462.0" y="282.0" width="186" height="54" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="2470.0" y="300.0" font-size="11" font-weight="bold" fill="#212121">N29 ?</text>
+<text x="2470.0" y="315.0" font-size="10" fill="#37474f">L107-109: ternary</text>
+<text x="2470.0" y="330.0" font-size="10" fill="#37474f">  discount &gt; 0 ?</text>
+<rect x="2692.0" y="282.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2700.0" y="300.0" font-size="11" font-weight="bold" fill="#212121">N30</text>
+<text x="2700.0" y="315.0" font-size="10" fill="#37474f">L108: discount_q =</text>
+<text x="2700.0" y="330.0" font-size="10" fill="#37474f">  quantize_money(discount) [call]</text>
+<rect x="2692.0" y="368.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2700.0" y="386.0" font-size="11" font-weight="bold" fill="#212121">N31</text>
+<text x="2700.0" y="401.0" font-size="10" fill="#37474f">L109: discount_q = 0.00</text>
+<rect x="2462.0" y="368.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2470.0" y="386.0" font-size="11" font-weight="bold" fill="#212121">N32</text>
+<text x="2470.0" y="401.0" font-size="10" fill="#37474f">L110: taxable = subtotal_q</text>
+<text x="2470.0" y="416.0" font-size="10" fill="#37474f">  - discount_q</text>
+<rect x="2462.0" y="454.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="2470.0" y="472.0" font-size="11" font-weight="bold" fill="#212121">N33 ?</text>
+<text x="2470.0" y="487.0" font-size="10" fill="#37474f">L111: if taxable &lt; 0</text>
+<rect x="2692.0" y="454.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2700.0" y="472.0" font-size="11" font-weight="bold" fill="#212121">N34</text>
+<text x="2700.0" y="487.0" font-size="10" fill="#37474f">L112: taxable = 0.00</text>
+<rect x="2462.0" y="540.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2470.0" y="558.0" font-size="11" font-weight="bold" fill="#212121">N35</text>
+<text x="2470.0" y="573.0" font-size="10" fill="#37474f">L113: taxable =</text>
+<text x="2470.0" y="588.0" font-size="10" fill="#37474f">  quantize_money(taxable) [call]</text>
+<rect x="2462.0" y="626.0" width="186" height="54" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="2470.0" y="644.0" font-size="11" font-weight="bold" fill="#212121">N36 ?</text>
+<text x="2470.0" y="659.0" font-size="10" fill="#37474f">L114-116: ternary</text>
+<text x="2470.0" y="674.0" font-size="10" fill="#37474f">  shipping &gt; 0 ?</text>
+<rect x="2692.0" y="626.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2700.0" y="644.0" font-size="11" font-weight="bold" fill="#212121">N37</text>
+<text x="2700.0" y="659.0" font-size="10" fill="#37474f">L115: shipping_q =</text>
+<text x="2700.0" y="674.0" font-size="10" fill="#37474f">  quantize_money(shipping) [call]</text>
+<rect x="2692.0" y="712.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2700.0" y="730.0" font-size="11" font-weight="bold" fill="#212121">N38</text>
+<text x="2700.0" y="745.0" font-size="10" fill="#37474f">L116: shipping_q = 0.00</text>
+<rect x="2462.0" y="712.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2470.0" y="730.0" font-size="11" font-weight="bold" fill="#212121">N39</text>
+<text x="2470.0" y="745.0" font-size="10" fill="#37474f">L117-123: fee = compute_fee(</text>
+<text x="2470.0" y="760.0" font-size="10" fill="#37474f">  taxable, ...) [call]</text>
+<rect x="2462.0" y="798.0" width="186" height="39" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="2470.0" y="816.0" font-size="11" font-weight="bold" fill="#212121">N40 ?</text>
+<text x="2470.0" y="831.0" font-size="10" fill="#37474f">L124: if not vat_enabled</text>
+<rect x="2692.0" y="798.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2700.0" y="816.0" font-size="11" font-weight="bold" fill="#212121">N41</text>
+<text x="2700.0" y="831.0" font-size="10" fill="#37474f">L125: vat = 0.00</text>
+<rect x="2462.0" y="884.0" width="186" height="54" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="2470.0" y="902.0" font-size="11" font-weight="bold" fill="#212121">N42 ?</text>
+<text x="2470.0" y="917.0" font-size="10" fill="#37474f">L126: elif vat_override</text>
+<text x="2470.0" y="932.0" font-size="10" fill="#37474f">  is not None</text>
+<rect x="2692.0" y="884.0" width="186" height="54" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="2700.0" y="902.0" font-size="11" font-weight="bold" fill="#212121">N43 ?</text>
+<text x="2700.0" y="917.0" font-size="10" fill="#37474f">L127-129: ternary</text>
+<text x="2700.0" y="932.0" font-size="10" fill="#37474f">  vat_override &gt; 0 ?</text>
+<rect x="2692.0" y="970.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2700.0" y="988.0" font-size="11" font-weight="bold" fill="#212121">N44</text>
+<text x="2700.0" y="1003.0" font-size="10" fill="#37474f">L127-129: vat =</text>
+<text x="2700.0" y="1018.0" font-size="10" fill="#37474f">  quantize_money(sel) [call]</text>
+<rect x="2922.0" y="970.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2930.0" y="988.0" font-size="11" font-weight="bold" fill="#212121">N45</text>
+<text x="2930.0" y="1003.0" font-size="10" fill="#37474f">L130-140: vat = compute_vat(</text>
+<text x="2930.0" y="1018.0" font-size="10" fill="#37474f">  taxable, ...) [call]</text>
+<rect x="2462.0" y="1056.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2470.0" y="1074.0" font-size="11" font-weight="bold" fill="#212121">N46</text>
+<text x="2470.0" y="1089.0" font-size="10" fill="#37474f">L141: total = taxable</text>
+<text x="2470.0" y="1104.0" font-size="10" fill="#37474f">  + shipping_q + fee + vat</text>
+<rect x="2462.0" y="1142.0" width="186" height="54" rx="4" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.3"/>
+<text x="2470.0" y="1160.0" font-size="11" font-weight="bold" fill="#212121">N47 ?</text>
+<text x="2470.0" y="1175.0" font-size="10" fill="#37474f">L148: if total &lt; 0</text>
+<text x="2470.0" y="1190.0" font-size="10" fill="#37474f">  (pragma: no cover)</text>
+<rect x="2692.0" y="1142.0" width="186" height="39" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2700.0" y="1160.0" font-size="11" font-weight="bold" fill="#212121">N48</text>
+<text x="2700.0" y="1175.0" font-size="10" fill="#37474f">L149: total = 0.00</text>
+<rect x="2462.0" y="1228.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2470.0" y="1246.0" font-size="11" font-weight="bold" fill="#212121">N49</text>
+<text x="2470.0" y="1261.0" font-size="10" fill="#37474f">L150: total =</text>
+<text x="2470.0" y="1276.0" font-size="10" fill="#37474f">  quantize_money(total) [call]</text>
+<rect x="2462.0" y="1314.0" width="186" height="54" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.3"/>
+<text x="2470.0" y="1332.0" font-size="11" font-weight="bold" fill="#212121">N50</text>
+<text x="2470.0" y="1347.0" font-size="10" fill="#37474f">L151-159: return</text>
+<text x="2470.0" y="1362.0" font-size="10" fill="#37474f">  PricingBreakdown(...)</text>
+<rect x="2462.0" y="1400.0" width="186" height="39" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1.3"/>
+<text x="2555.0" y="1423.5" font-size="11" font-weight="bold" fill="#212121" text-anchor="middle">EXIT compute_totals</text>
+</svg>
